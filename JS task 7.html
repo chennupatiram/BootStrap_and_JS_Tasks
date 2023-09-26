@@ -1,0 +1,43 @@
+<html>   
+   <head>
+      <title>JavaScript Animation</title>      
+      <script type = "text/javascript">
+         <!--
+            var imgObj = null;
+            var animate ;
+            var screenWidth = window.innerWidth;
+            
+            function init() {
+               imgObj = document.getElementById('myImage');
+               imgObj.style.position= 'relative'; 
+               imgObj.style.left = '0px'; 
+            }
+            function moveRight() {
+                var currentLeft = parseInt(imgObj.style.left);
+               if (currentLeft >= screenWidth - imgObj.width) {
+                  imgObj.style.left = '0px'; // Reset to the beginning
+               } else {
+                  imgObj.style.left = currentLeft + 10 + 'px';
+               }
+               animate = setTimeout(moveRight, 50);    // call moveRight in 20msec
+            }
+            function stop() {
+               clearTimeout(animate); 
+            }
+            
+            window.onload = init;
+         //-->
+      </script>
+   </head>
+   
+   <body>   
+      <form>
+         <img id = "myImage" src = "train img.png"  />
+         <center>
+         <p>Click the buttons below to handle animation</p>
+         <input type = "button" value = "Start" onclick = "moveRight();" />
+         <input type = "button" value = "Stop" onclick = "stop();" />
+        </center>
+      </form>      
+   </body>
+</html>

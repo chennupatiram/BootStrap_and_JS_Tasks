@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap task-5</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <style>
+        .container {
+            background-color: rgb(210, 208, 208);
+            font-family: Arial, Helvetica, sans-serif;
+            margin-top: 2em;
+            padding: 1em;
+            border-radius: 5px;
+            width: 60%;
+        }
+
+        .button {
+            background-color: rgb(230, 155, 15);
+            color: white;
+            font-size: 13px;
+            border-radius: 5px;
+            /* position: absolute; */
+            transform: translate(-50%, -50%);
+            top: 90%;
+            left: 34%;
+        }
+
+        .l {
+            font-weight: bold;
+        }
+        .error-message{
+            font-size: 13px;
+            margin-top: 5px;
+            color: red;
+        }
+
+        
+    </style>
+
+
+</head>
+
+<body>
+    <div class="container">
+        <form  id="myForm" class="needs-validation" novalidate >
+            <div class="row mb-3">
+                <label for="firstname" class="col-sm-2 l col-form-label">First Name</label>
+                <div class="col-sm-10">
+                    <div class="input-group">
+                        <div class="input-group-text"><i class="fa-solid fa-user"></i></div>
+                        <input type="text" class="form-control i" id="firstname" placeholder="First Name"
+                            required>
+                    </div>
+                </div>
+            </div>
+            <div class="row mb-3">
+                <label for="lastname" class="col-sm-2 l col-form-label">Last Name</label>
+                <div class="col-sm-10">
+                    <div class="input-group">
+                        <div class="input-group-text"><i class="fa-solid fa-user"></i></div>
+                        <input type="text" class="form-control i" id="lastname"
+                            placeholder="Last Name" required>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                <label for="email" class="col-sm-2 l col-form-label">E-Mail</label>
+                <div class="col-sm-10">
+                    <div class="input-group">
+                        <div class="input-group-text"><i class="fa-solid fa-envelope"></i></div>
+                        <input type="text" class="form-control i" id="email"
+                            placeholder="E-Mail Address" required>
+                    </div>
+                </div>
+            </div>
+            <div class="row mb-3">
+                <label for="phonenumber" class="col-sm-2 l col-form-label">Phone #</label>
+                <div class="col-sm-10">
+                    <div class="input-group">
+                        <div class="input-group-text"><i class="fa-solid fa-phone"></i></div>
+                        <input type="text" class="form-control i" id="phonenumber"
+                            placeholder="(845)555-1212" required>
+                    </div>
+                </div>
+            </div>
+            <div class="row mb-3">
+                <label for="address" class="col-sm-2 l col-form-label">Address</label>
+                <div class="col-sm-10">
+                    <div class="input-group">
+                        <div class="input-group-text"><i class="fa-solid fa-house"></i></div>
+                        <input type="text" class="form-control i" id="address"
+                            placeholder="Address" required>
+                    </div>
+                </div>
+            </div>
+            <div class="row mb-3">
+                <label for="city" class="col-sm-2 l col-form-label">City</label>
+                <div class="col-sm-10">
+                    <div class="input-group">
+                        <div class="input-group-text"><i class="fa-solid fa-house"></i></div>
+                        <input type="text" class="form-control i" id="city"
+                            placeholder="City" required>
+                    </div>
+                </div>
+            </div>
+            <div class="row mb-3">
+                <label for="state" class="col-sm-2 l col-form-label">State</label>
+                <div class="col-sm-10">
+                    <div class="input-group">
+                        <div class="input-group-text"><i class="fa-solid fa-list"></i></div>
+                        <select class="form-select form-control  form-select-sm" id="state"
+                            aria-label="Small select example" required>
+                            <option selected>Open this select menu</option>
+                            <option value="1">Andhra pradesh</option>
+                            <option value="2">Telangana</option>
+                            <option value="3">kerala</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <fieldset class="row mb-5">
+                <legend class="col-form-label l col-sm-2 pt-0">Do you have hosting?</legend>
+                <div class="col-sm-10">
+                    <div class="form-check" >
+                        <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1"
+                            checked>
+                        <label class="form-check-label" for="gridRadios1">
+                            Yes
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
+                        <label class="form-check-label" for="gridRadios2">
+                            No
+                        </label>
+                    </div>
+
+                </div>
+                
+                <div class="row mb-2">
+                    <label for="project desp" class="col-sm-2 l col-form-label">Project Description</label>
+                    <div class="col-sm-10">
+                        <div class="input-group">
+                            <div class="input-group-text"><i class="fa-solid fa-pen"></i></div>
+                            <input type="text" class="form-control i" id="project desp"
+                                placeholder="Project Description" required>
+                        </div>
+                    </div>
+                
+                </div>
+            
+            </fieldset>
+    
+    <center>
+    <button type="submit" class=" btn button" id="send">Send <i class="fa-solid fa-paper-plane"></i></button>
+    </center>
+    </div>
+    </form>
+    </div>
+
+    <script>
+        document.getElementById('myForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+            clearErrorMessages();
+
+            const firstname = document.getElementById('firstname').value.trim();
+            const lastname = document.getElementById('lastname').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const phonenumber = document.getElementById('phonenumber').value.trim();
+            const address = document.getElementById('address').value.trim();
+            const city = document.getElementById('city').value.trim();
+            const state = document.getElementById('state').value.trim();
+            const projectDescription = document.getElementById('project desp').value.trim();
+
+            if (firstname === '') {
+                showError('firstname', 'Please enter your First Name');
+            }
+            if (lastname === '') {
+                showError('lastname', 'Please enter your Last Name');
+            }
+            if (email === '') {
+                showError('email', 'Please enter your Email Address');
+            } else if (!isValidEmail(email)) {
+                showError('email', 'Please enter a valid Email Address');
+            }
+            if (phonenumber === '') {
+                showError('phonenumber', 'Please enter your Phone ');
+            } else if (!isValidPhoneNumber(phonenumber)) {
+                showError('phonenumber', 'Please enter a valid Phone ');
+            }
+            if (address === '') {
+                showError('address', 'Please enter your Address');
+            }
+            if (city === '') {
+                showError('city', 'Please enter your City');
+            }
+            if (state === 'Open this select menu') {
+                showError('state', 'Please select your State');
+            }
+            if (projectDescription === '') {
+                showError('project desp', 'Please enter your Project Description');
+            }
+
+            
+            if (document.querySelectorAll('.error-message').length === 0) {
+                
+                alert('Form is valid and can be submitted.');
+            }
+        });
+
+        function clearErrorMessages() {
+            const errorMessages = document.querySelectorAll('.error-message');
+            errorMessages.forEach((error) => {
+                error.remove();
+            });
+        }
+
+        function showError(fieldId, errorMessage) {
+            const field = document.getElementById(fieldId);
+            const error = document.createElement('div');
+            error.className = 'error-message';
+            error.innerHTML = errorMessage;
+            field.parentNode.appendChild(error);
+            
+        }
+
+        function isValidEmail(email) { 
+            return email.includes('@');
+        }
+
+        function isValidPhoneNumber(phonenumber) {
+            return phonenumber.match(/^\(\d{3}\)\d{3}-\d{4}$/);
+        }
+
+    </script>
+
+
+    
+</body>
+
+</html>
